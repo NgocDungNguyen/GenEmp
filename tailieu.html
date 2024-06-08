@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài Liệu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+        <ul>
+            <li><a href="signup.html"><i class="fas fa-pen"></i> Đăng kí</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="dangki.html"><i class="fas fa-users"></i> Đăng kí lịch</a></li>
+            <li><a href="lichlam.html"><i class="fas fa-calendar-alt"></i> Lịch Làm</a></li>
+            <li><a href="trade.html"><i class="fas fa-exchange-alt"></i> Trade</a></li>
+            <li><a href="bangiao.html"><i class="fas fa-building"></i> Bàn Giao</a></li>
+            <li><a href="kho.html"><i class="fas fa-database"></i> BackUp</a></li>
+            <li><a href="tailieu.html"><i class="fas fa-file-alt"></i> Tài Liệu</a></li>
+            <li><a href="kinang.html"><i class="fas fa-graduation-cap"></i> Kĩ Năng</a></li>
+            <li><i class="fas fa-bell"></i> Thông Báo</li>
+        </ul>
+    </div>
+    <div class="tailieu-content">
+        <h1>Tài Liệu Training</h1>
+        <div class="form-group">
+            <label for="categorySelect">Chọn danh mục</label>
+            <select id="categorySelect">
+                <option value="Dẫn Phòng">Dẫn Phòng</option>
+                <option value="Hide&Seek">Hide&Seek</option>
+                <option value="The Morgue (GUM)">The Morgue (GUM)</option>
+                <option value="Gone">Gone</option>
+                <option value="The Illusion (AM)">The Illusion (AM)</option>
+                <option value="Ngải 1">Ngải 1</option>
+                <option value="Ngải 2">Ngải 2</option>
+                <option value="Chiếc Hài Đỏ">Chiếc Hài Đỏ</option>
+                <option value="Rồng Rắn Lên Mây">Rồng Rắn Lên Mây</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button id="uploadDocument" class="btn">Tải lên tài liệu</button>
+            <input type="file" id="fileInput" style="display: none;">
+        </div>
+        <h2>Danh Sách Tài Liệu</h2>
+        <div class="table-container">
+            <table id="documentTable">
+                <thead>
+                    <tr>
+                        <th>Tên Tài Liệu</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic content will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="viewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="documentViewer" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="tailieu.js"></script>
+</body>
+</html>

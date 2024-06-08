@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bàn Giao</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+        <ul>
+            <li><a href="signup.html"><i class="fas fa-pen"></i> Đăng kí</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="dangki.html"><i class="fas fa-users"></i> Đăng kí lịch</a></li>
+            <li><a href="lichlam.html"><i class="fas fa-calendar-alt"></i> Lịch Làm</a></li>
+            <li><a href="trade.html"><i class="fas fa-exchange-alt"></i> Trade</a></li>
+            <li><a href="bangiao.html"><i class="fas fa-building"></i> Bàn Giao</a></li>
+            <li><a href="kho.html"><i class="fas fa-database"></i> BackUp</a></li>
+            <li><a href="tailieu.html"><i class="fas fa-file-alt"></i> Tài Liệu</a></li>
+            <li><a href="kinang.html"><i class="fas fa-graduation-cap"></i> Kĩ Năng</a></li>
+            <li><i class="fas fa-bell"></i> Thông Báo</li>
+        </ul>
+    </div>
+    <div class="bangiao-content">
+        <h1>Quản Lý Bàn Giao Phòng</h1>
+        <div class="form-group">
+            <label for="weekSelect">Chọn Tuần</label>
+            <select id="weekSelect"></select>
+        </div>
+        <div class="form-group">
+            <label for="daySelect">Chọn Ngày</label>
+            <select id="daySelect">
+                <option value="Mon">Monday</option>
+                <option value="Tue">Tuesday</option>
+                <option value="Wed">Wednesday</option>
+                <option value="Thu">Thursday</option>
+                <option value="Fri">Friday</option>
+                <option value="Sat">Saturday</option>
+                <option value="Sun">Sunday</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="roomSelect">Chọn Phòng</label>
+            <select id="roomSelect">
+                <option value="Hide&Seek">Hide&Seek</option>
+                <option value="The Morgue GUM">The Morgue GUM</option>
+                <option value="Gone">Gone</option>
+                <option value="The Illusion (AM)">The Illusion (AM)</option>
+                <option value="The Incantation (Ngải)">The Incantation (Ngải)</option>
+                <option value="The Red Bride (CHĐ)">The Red Bride (CHĐ)</option>
+                <option value="Rồng Rắn Lên Mây">Rồng Rắn Lên Mây</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="itemName">Tên đồ đạc</label>
+            <input type="text" id="itemName">
+            <button id="addItem" class="add-button">Thêm</button>
+        </div>
+        <div class="form-group">
+            <label for="sortSelect">Sắp xếp theo</label>
+            <select id="sortSelect">
+                <option value="Tên A-Z">Tên A-Z</option>
+                <option value="Tên Z-A">Tên Z-A</option>
+                <option value="Trạng Thái">Trạng Thái</option>
+                <option value="Hoàn Thành">Hoàn Thành</option>
+            </select>
+        </div>
+        <h2>Trạng thái phòng</h2>
+        <div class="table-container">
+            <table id="bangiaoTable">
+                <thead>
+                    <tr>
+                        <th>Tên Đồ Đạc</th>
+                        <th>Trạng Thái</th>
+                        <th>Ghi Chú</th>
+                        <th>Hoàn Thành</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic content will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="sidebar.js"></script>
+    <script src="script.js"></script>
+    <script src="bangiao.js"></script>
+</body>
+</html>

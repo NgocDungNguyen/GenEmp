@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Làm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo Placeholder">
+        </div>
+        <ul>
+            <li><a href="signup.html"><i class="fas fa-pen"></i> Đăng kí</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="dangki.html"><i class="fas fa-users"></i> Đăng kí lịch</a></li>
+            <li><a href="lichlam.html"><i class="fas fa-calendar-alt"></i> Lịch Làm</a></li>
+            <li><a href="trade.html"><i class="fas fa-exchange-alt"></i> Trade</a></li>
+            <li><a href="bangiao.html"><i class="fas fa-building"></i> Bàn Giao</a></li>
+            <li><a href="kho.html"><i class="fas fa-database"></i> BackUp</a></li>
+            <li><a href="tailieu.html"><i class="fas fa-file-alt"></i> Tài Liệu</a></li>
+            <li><a href="kinang.html"><i class="fas fa-graduation-cap"></i> Kĩ Năng</a></li>
+            <li><i class="fas fa-bell"></i> Thông Báo</li>
+        </ul>
+    </div>
+    <div class="shift-content">
+        <div class="form-container">
+            <h2>Lịch Làm</h2>
+            <div class="form-group">
+                <label for="week-select">Chọn tuần:</label>
+                <select id="week-select" name="week-select"></select>
+            </div>
+            <div class="shift-note">
+                <p><strong>Ghi chú ca làm việc:</strong></p>
+                <p><span class="shift-morning"></span> Sáng (8h30-12h30)</p>
+                <p><span class="shift-afternoon"></span> Chiều (12h30-17h)</p>
+                <p><span class="shift-evening"></span> Tối (17h-22h)</p>
+                <p><span class="shift-night"></span> Đêm (22h-1h30)</p>
+            </div>
+            <div class="table-container">
+                <table id="shift-table">
+                    <thead>
+                        <tr>
+                            <th>Nhân Viên</th>
+                            <th>Mon (3/6)</th>
+                            <th>Tue (4/6)</th>
+                            <th>Wed (5/6)</th>
+                            <th>Thu (6/6)</th>
+                            <th>Fri (7/6)</th>
+                            <th>Sat (8/6)</th>
+                            <th>Sun (9/6)</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="9" class="text-center p-4">Không có dữ liệu cho tuần này.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Shift Modal -->
+    <div id="addShiftModal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="addShiftModal">&times;</span>
+            <h2>Thêm ca cho nhân viên này</h2>
+            <div class="form-group">
+                <label for="shift-select">Chọn ca:</label>
+                <select id="shift-select" name="shift-select">
+                    <option value="Sáng">Sáng</option>
+                    <option value="Chiều">Chiều</option>
+                    <option value="Tối">Tối</option>
+                    <option value="Đêm">Đêm</option>
+                </select>
+            </div>
+            <button type="button" id="addShiftButton">Thêm</button>
+        </div>
+    </div>
+
+    <!-- Remove Shift Modal -->
+    <div id="removeShiftModal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-close="removeShiftModal">&times;</span>
+            <h2>Bạn có muốn xóa ca làm này không?</h2>
+            <div class="modal-buttons">
+                <button class="yes" id="removeShiftButton">Yes</button>
+                <button class="no" data-close="removeShiftModal">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="script.js"></script>
+</html>
